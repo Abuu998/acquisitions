@@ -1,7 +1,7 @@
-import "./server"
-import app from './app'
+import './server';
+import app from './app';
 
-const PORT = Bun.env.PORT || 3000
+const PORT = Bun.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Listening on port http://localhost:${PORT}`)
-})
+  console.log(`Listening on port http://localhost:${PORT}`);
+});
