@@ -1,4 +1,4 @@
-import './server';
+import '@/server';
 import app from './app';
 
 const PORT = Bun.env.PORT || 3000;
