@@ -5,6 +5,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import logger from '@/config/logger';
 import authRouter from '@/routes/auth.route';
+import securityMiddleware from '@/middleware/security.middleware';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(
     },
   }),
 );
+app.use(securityMiddleware);
 
 //
 app.get('/', (req, res) => {

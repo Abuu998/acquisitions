@@ -79,8 +79,8 @@ export async function signOut(req: Request, res: Response, next: NextFunction) {
     const COOKIE_NAME = Bun.env.ACCESS_COOKIE_NAME!;
     cookies.clear(res, COOKIE_NAME);
 
-    logger.info('User login successfully');
-    return res.status(204);
+    logger.info('User logout successfully');
+    return res.status(204).json({ message: 'User logout successfully' });
   } catch (e: unknown) {
     logger.error('Sign in Error', e);
 
